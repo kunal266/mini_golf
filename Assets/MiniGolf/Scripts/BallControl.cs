@@ -42,6 +42,7 @@ public class BallControl : MonoBehaviour
     {
         if (rgBody.velocity == Vector3.zero && !ballIsStatic)   //if velocity is zero and ballIsStatic is false
         {
+            print(rgBody.velocity);
             ballIsStatic = true;                                //set ballIsStatic to true
             LevelManager.instance.ShotTaken();                  //inform LevelManager of shot taken
             rgBody.angularVelocity = Vector3.zero;              //set angular velocity to zero
